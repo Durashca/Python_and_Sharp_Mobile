@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#1E1E1E"
+    tools:context=".MainActivity">
+
+    <!-- Выбор языка -->
+    <Spinner
+        android:id="@+id/languageSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="#252526"
+        android:popupBackground="#333333"
+        android:padding="12dp"
+        android:textColor="#D4D4D4"
+        android:entries="@array/languages" />
+
+    <!-- Поле ввода кода -->
+    <MultiAutoCompleteTextView
+        android:id="@+id/codeInputEditText"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#252526"
+        android:padding="12dp"
+        android:gravity="top|start"
+        android:hint="# Напиши код здесь..."
+        android:inputType="textMultiLine|textNoSuggestions"
+        android:textColor="#D4D4D4"
+        android:textColorHint="#6A6A6A"
+        android:textSize="14sp"
+        android:typeface="monospace" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/exampleButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:text="📋 Пример"
+            android:backgroundTint="#6A9955" />
+
+        <Button
+            android:id="@+id/runCodeButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="🚀 Выполнить"
+            android:backgroundTint="#4FC3F7" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:layout_weight="1"
+        android:background="#1E1E1E">
+
+        <TextView
+            android:id="@+id/outputTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:text=">>> Консоль готова."
+            android:textColor="#D4D4D4"
+            android:textIsSelectable="true"
+            android:textSize="13sp"
+            android:typeface="monospace" />
+    </ScrollView>
+
+</LinearLayout>
